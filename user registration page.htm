@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+<script>
+function validations()
+{
+if(document.getElementById('xx').checked == true)
+{
+alert("your registeration is successful");
+}
+else
+{
+alert("please accept terms and conditions");
+}
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+
+
+</script>
+</head>
+<body>
+<h1>User Registration page</h1>
+<br>
+<table align="left">
+<tr>
+<td align="right">Username:</td>
+<td align="left"><input type="text" id="name"maxlength="40" size="36">
+</tr>
+<tr>
+<td align="right">Email:</td>
+<td align="left"><input type="email"   id="email"size="36" >
+</tr>
+<tr>
+<td align="right">password:</td>
+<td align="left"><input type="password"id="pw" maxlength="40" size="36" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"title="must contain atleast one num,one uppercase and one lower case letter and atleast 8 or more charaters">
+</tr>
+<tr>
+<td align="right">Organisation:</td>
+<td align="left"><input type="organisation" id="org"maxlength="40" size="36">
+</tr>
+<td>
+<td align="left"><input type="checkbox" id="xx"value="yy">I agree with the terms and conditions
+</tr>
+<td align="center-left"><input type="SUBMIT" value="REGISTER"onclick="validations()"></td>
+<td align="center-right"><input type="RESET" value="RESET" onclick="resetfields()"></td>
+</tr>
+</table>
+<form ng-app = "">
+adress<br>
+<lable>house no</label>
+<input type="text"ng-model="address"placehoder="enter a name here">
+<lable>street name</label>
+<input type="text"ng-model="street"placehoder="enter a name here">
+<lable>district</label>
+<input type="text"ng-model="dis"placehoder="enter a name here">
+<h1>{{address}},{{street}},{{dis}}</h1>
+</form>
+</body>
+</html>
